@@ -60,7 +60,7 @@ def random_forest(features):
     print ("Training the random forest...")
     from sklearn.ensemble import RandomForestClassifier
     
-    # Initialize a Random Forest classifier with 100 trees
+    # Initialize a Random Forest classifier with 50 trees
     forest = RandomForestClassifier(n_estimators = 50) 
     # Fit the forest to the training set, using the bag of words as 
     # features and the sentiment labels as the response variable
