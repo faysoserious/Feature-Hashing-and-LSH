@@ -12,16 +12,4 @@ for i in range(resize_height):
             difference[i].append(True)
         else:
             difference[i].append(False)# every difference is 8 bit, 8 of 8 bit derive a hex
-decimal_value = 0
-hash_string = ""
-for index, value in enumerate(difference):    
-    if value:  # value =0, optimize        
-        decimal_value += (value*1) * (2 ** (index % 8))   
-    if index % 8 == 7:  # ending 8digits      
-        hash_string += str(hex(decimal_value)[2:].rjust(2, "0"))      
-        decimal_value = 0
 
-
-with open('exercise10_2.txt', 'wt') as f:
-    for item in image:
-        print(item,file =f)
